@@ -1,3 +1,6 @@
+#유튜브 생활코딩 영상을 참조하며 공부중이다.
+>start 2020 02 04 
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
