@@ -1,5 +1,7 @@
-#유튜브 생활코딩 영상을 참조하며 공부중이다.
->start 2020 02 04 
+# start 2020/02/04 ~
+
+**유튜브 생활코딩 영상을 참조하며 공부중이다.**
+> 포기하지말고 끝까지 해보자
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
