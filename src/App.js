@@ -9,7 +9,9 @@ class App extends Component { //초기에 Function 상태이면 class 로 변경
   constructor(props){
     super(props); //생성자로 값 초기화
     this.state = {
+      mode:'read',
       subject:{title:'web', sub:'world!'},
+      welcome:{title:'aaa', desc:'bcb'},
       contents:[
         {id:1, title:'HTML',desc:'html is hypertext'},
         {id:2, title:'CSS',desc:'css is hypertext'},
@@ -18,11 +20,20 @@ class App extends Component { //초기에 Function 상태이면 class 로 변경
     }
   }
     render() {
+      var _title = null;
+      var _desc = null;
+        if(this.state.mode === 'welcome'){
+          _title = this.state.welcome.title;
+          _desc = this.state.welcome.desc;
+        }else if(this.state.mode === 'read'){
+          _title = this.state.contents[0].title;
+          _desc = this.state.contents[0].desc;
+        }
     return(//꼭 필요한 부분 없으면 오류
       <div className="App">
         <Subject title={this.state.subject.title} sub={this.state.subject.sub}></Subject>
         <TOC data={this.state.contents}></TOC>
-        <Content title ="HTML" desc="HTML is mine"></Content>
+        <Content title ={_title} desc={_desc}></Content>
       </div>
     );//복잡도를 획기적으로 낮췄음
   }
